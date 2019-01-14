@@ -1776,7 +1776,7 @@ var Trigger = function (_Component) {
   createClass(Trigger, [{
     key: 'componentDidMount',
     value: function componentDidMount() {
-      window.addEventListener('click', this.handleDocumentClick, false);
+      window.addEventListener('mousedown', this.handleDocumentClick, false);
 
       if (this.props.appendToBody) {
         window.addEventListener('scroll', this.handlePortalPosition, false);
@@ -1786,7 +1786,7 @@ var Trigger = function (_Component) {
   }, {
     key: 'componentWillUnmount',
     value: function componentWillUnmount() {
-      window.removeEventListener('click', this.handleDocumentClick, false);
+      window.removeEventListener('mousedown', this.handleDocumentClick, false);
 
       if (this.props.appendToBody) {
         window.removeEventListener('scroll', this.handlePortalPosition, false);
